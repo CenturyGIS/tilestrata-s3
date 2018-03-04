@@ -1,0 +1,29 @@
+{
+  "name": "tilestrata-s3",
+  "version": "0.0.0",
+  "description": "Tilestrata cache plugin for saving and retrieving tiles with AWS S3",
+  "main": "lib/index.js",
+  "scripts": {
+    "prod:build": "rimraf lib && babel src -d lib --ignore .test.js",
+    "start": "babel-node src",
+    "test": "eslint src"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "@mapbox/tilelive-s3": "^6.7.0",
+    "@turf/bbox-polygon": "^5.1.5",
+    "@turf/intersect": "^5.1.6",
+    "lodash": "^4.17.5"
+  }
+}
