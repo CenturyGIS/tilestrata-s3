@@ -2,7 +2,7 @@
   "name": "tilestrata-s3",
   "version": "0.0.0",
   "description": "Tilestrata cache plugin for saving and retrieving tiles with AWS S3",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "prod:build": "rimraf lib && babel src -d lib --ignore .test.js",
     "start": "babel-node src",
