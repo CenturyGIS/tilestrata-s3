@@ -18,6 +18,7 @@ export default class S3Cache {
    */
   constructor(options) {
     const empty = options.interactivity ? JSON.stringify(emptyGrid) : emptyTile;
+    options = options || {};
     this.options = _.defaults(options, {
       emptyBuffer: options.emptyBuffer || new Buffer(empty, 'utf8')
       // minZoom: options.minZoom || 0,
@@ -40,7 +41,7 @@ export default class S3Cache {
           const tilePolygon = getTilePolygon(req.z, req.x, req.y);
           const overlaps = intersect(tilePolygon, this.options.extent);
           if (!overlaps) {
-            return callback(null, this.option.emptyBuffer, _.clone(headers));
+            return callback(null, this.options.emptyBuffer, _.clone(headers));
           }
         }
         return callback(err);
