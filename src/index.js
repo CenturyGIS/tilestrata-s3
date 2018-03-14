@@ -17,9 +17,7 @@ export default class S3Cache {
    * @param  {number}        [options.maxZoom]
    */
   constructor(options) {
-
     const empty = options.interactivity ? JSON.stringify(emptyGrid) : emptyTile;
-
     this.options = _.defaults(options, {
       emptyBuffer: options.emptyBuffer || new Buffer(empty, 'utf8')
       // minZoom: options.minZoom || 0,
@@ -35,17 +33,14 @@ export default class S3Cache {
   }
 
   get (server, req, callback) {
-
-    const getTileFn = this.options.interactivity ? this.source.getGrid : this.source.getTile;
-
-    getTileFn.call(this.source, req.z, req.x, req.y, (err, buffer, headers) => {
+    this.source.getTile(req.z, req.x, req.y, (err, buffer, headers) => {
       if (err) {
         const notRetryable = typeof(err.retryable) === 'boolean' && !err.retryable;
         if (notRetryable && this.options.extent) {
           const tilePolygon = getTilePolygon(req.z, req.x, req.y);
           const overlaps = intersect(tilePolygon, this.options.extent);
           if (!overlaps) {
-            return callback(null, this.options.emptyBuffer, _.clone(headers));
+            return callback(null, this.option.emptyBuffer, _.clone(headers));
           }
         }
         return callback(err);

@@ -38,7 +38,7 @@ server.layer('mylayer').route('tile.png')
   }));
 
 // if interactivity is true, will render empty UTF grids if outside of extent
-// polygon
+// polygon - instead of supplying the `emptyBuffer`
 server.layer('mylayer').route('tile.json')
   .use(/* some provider */)
   .use(s3({
