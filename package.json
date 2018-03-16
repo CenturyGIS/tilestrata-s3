@@ -3,6 +3,8 @@
   "version": "0.1.5",
   "description": "Tilestrata cache plugin for saving and retrieving tiles with AWS S3",
   "main": "index.js",
+  "homepage": "https://github.com/CenturyGIS/tilestrata-s3",
+  "bugs": "https://github.com/CenturyGIS/tilestrata-s3/issues/new",
   "scripts": {
     "prod:build": "rimraf lib && babel src -d lib --ignore .test.js",
     "start": "babel-node src",
