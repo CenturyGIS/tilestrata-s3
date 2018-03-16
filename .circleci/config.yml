@@ -47,5 +47,5 @@ workflows:
           filters:
             branches:
               ignore: /.*/
-            tags:
+            tag:
               only: /v[0-9]+(\.[0-9]+)*/
