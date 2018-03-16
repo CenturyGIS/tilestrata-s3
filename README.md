@@ -2,6 +2,10 @@
 
 A [TileStrata](https://github.com/naturalatlas/tilestrata) plugin for storing / retrieving tiles from S3.
 
+```
+npm install tilestrata-s3
+```
+
 ## Sample Usage
 
 ```js
