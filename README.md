@@ -1,5 +1,7 @@
 # tilestrata-s3
 
+[![CircleCI](https://circleci.com/gh/CenturyGIS/tilestrata-s3.svg?style=svg&circle-token=0a50c8393ca298aea2e971983ef41a9c266cccb9)](https://circleci.com/gh/CenturyGIS/tilestrata-s3)
+
 A [TileStrata](https://github.com/naturalatlas/tilestrata) plugin for storing / retrieving tiles from S3.
 
 ```
