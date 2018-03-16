@@ -1,6 +1,6 @@
 {
   "name": "tilestrata-s3",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Tilestrata cache plugin for saving and retrieving tiles with AWS S3",
   "main": "index.js",
   "scripts": {
